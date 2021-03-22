@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useForm = (callback, validate, initialValues) => {
+const useFormCL = (callback, validate, initialValues) => {
   const [values, setValues] = useState(initialValues);
 
   const [errors, setErrors] = useState({});
@@ -43,4 +43,4 @@ const useForm = (callback, validate, initialValues) => {
   };
 };
 
-export default useForm;
+export default useFormCL;
