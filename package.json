@@ -1,0 +1,23 @@
+{
+  "name": "useformcl",
+  "version": "1.0.0",
+  "description": "Custom React Hook for form management",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^17.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/connorleee/useFormCL.git"
+  },
+  "author": "Connor Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/connorleee/useFormCL/issues"
+  },
+  "homepage": "https://github.com/connorleee/useFormCL#readme"
+}

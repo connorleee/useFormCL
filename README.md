@@ -11,9 +11,9 @@ Then...
 ```
 import { useFormCL } from 'useFormCL';
 
-const { handleChange, handleSubmit, values, errors } = useForm(
-    submit,
-    validate,
-    initialFormValues
+const { handleChange, handleSubmit, values, errors } = useFormCL(
+    callBack, //function to run on submit
+    validate, //object with validation errors
+    initialFormValues //object of initial form values
 );
 ```
