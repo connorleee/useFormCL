@@ -12,11 +12,29 @@ Then...
 import { useFormCL } from 'useFormCL';
 
 const form = () => {
+    const validate(formValues) {
+        let errors = {};
+
+        if (values.hasOwnProperty("firstName") && !values.firstName) {
+            errors.firstName = "First name is required";
+        }
+
+        return errors;
+    }
+
+    const initialFormValues = {
+        firstName: ""
+    }
+
     const { handleChange, handleSubmit, values, errors } = useFormCL(
         callBack, //function to call on form submission
-        validate, //object with validation errors
+        validate, //function returning object of validation errors
         initialFormValues //object of initial form values
     );
+
+    function callBack() {
+        console.log(values.firstName)
+    }
 
     return(
         <form onSubmit={handleSubmit} noValidate>
@@ -40,5 +58,4 @@ const form = () => {
         </form>
     )
 }
-
 ```
