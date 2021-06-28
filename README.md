@@ -1,6 +1,6 @@
 # What is this?
 
-Custom React Hook for form management.
+This package is a custom React Hook for form management. The state of the form will be managed by the package and the user can choose to provide validation logic which will be checked on form submission. If an input is invalid, an object of errors will be returned and the submission will abort.
 
 # Installation
 
