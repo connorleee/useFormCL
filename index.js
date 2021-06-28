@@ -9,10 +9,23 @@ const useFormCL = (callback, validate, initialValues) => {
 
   const handleChange = (event) => {
     // not using destructuring in order to handle the specific case where a form has a checkbox
-    const value =
-      event.target.type === "checkbox"
-        ? event.target.checked
-        : event.target.value;
+    const value;
+
+    if (event.target.type === "checkbox") {
+      value = event.target.checked;
+    } else if (
+      event.target.type === "select" ||
+      event.target.type === "select-multiple"
+    ) {
+      value = Array.from(
+        event.target.selectedOptions,
+        (option) => option.value
+      );
+    } else {
+      value = event.target.value;
+    }
+
+
     const name = event.target.name;
 
     setValues({
